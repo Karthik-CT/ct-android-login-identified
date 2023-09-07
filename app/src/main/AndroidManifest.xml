@@ -36,10 +36,10 @@
         <!-- TEST-KarthikTest Account -->
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="TEST-W8W-6WR-846Z" />
+            android:value="account_id" />
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="TEST-206-0b0" />
+            android:value="account_token" />
 
         <!--         <meta-data -->
         <!--         android:name="CLEVERTAP_USE_GOOGLE_AD_ID" -->
