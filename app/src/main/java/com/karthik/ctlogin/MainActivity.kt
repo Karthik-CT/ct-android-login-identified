@@ -5,8 +5,10 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.clevertap.android.pushtemplates.PushTemplateNotificationHandler
 import com.clevertap.android.sdk.ActivityLifecycleCallback
 import com.clevertap.android.sdk.CleverTapAPI
+import com.clevertap.android.sdk.interfaces.NotificationHandler
 import com.google.firebase.messaging.FirebaseMessaging
 import com.karthik.ctlogin.databinding.ActivityMainBinding
 
@@ -20,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        CleverTapAPI.setNotificationHandler(PushTemplateNotificationHandler() as NotificationHandler);
 
         CleverTapAPI.setDebugLevel(CleverTapAPI.LogLevel.DEBUG)
         cleverTapDefaultInstance = CleverTapAPI.getDefaultInstance(applicationContext)
@@ -75,7 +79,8 @@ class MainActivity : AppCompatActivity() {
                 "Category" to "Mens Accessories",
                 "Price" to 59.99
             )
-            cleverTapDefaultInstance?.pushEvent("Product Custom Viewed", prodViewedAction)
+//            cleverTapDefaultInstance?.pushEvent("Product Custom Viewed", prodViewedAction)
+            cleverTapDefaultInstance?.pushEvent("KarthikNotiEventNew", prodViewedAction)
             Toast.makeText(applicationContext, "Event Clicked!", Toast.LENGTH_SHORT).show()
         }
 

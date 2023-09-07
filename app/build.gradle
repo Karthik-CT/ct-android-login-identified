@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         configurations.all {
@@ -57,7 +57,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
 
     //CleverTap SDK
-    implementation 'com.clevertap.android:clevertap-android-sdk:4.4.0'
+    implementation 'com.clevertap.android:clevertap-android-sdk:4.6.9'
     implementation 'com.google.firebase:firebase-messaging:23.0.4'
     implementation 'androidx.core:core-ktx:1.7.0'
     //Mandatory for CleverTap Android SDK v3.6.4 and above add the following -
@@ -71,4 +71,7 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer:2.16.1'
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.16.1'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.16.1'
+
+    //push templates
+    implementation "com.clevertap.android:push-templates:1.0.5.1"
 }

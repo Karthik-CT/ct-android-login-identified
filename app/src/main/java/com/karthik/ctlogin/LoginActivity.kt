@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.clevertap.android.pushtemplates.PushTemplateNotificationHandler
+import com.clevertap.android.sdk.CleverTapAPI
+import com.clevertap.android.sdk.interfaces.NotificationHandler
 //import com.clevertap.android.sdk.CleverTapAPI
 import com.karthik.ctlogin.databinding.ActivityLoginBinding
 
@@ -19,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
 //        CleverTapAPI.getDefaultInstance(applicationContext)?.getCleverTapID {
 //            println("CTID: $it")
 //        }
+
+        CleverTapAPI.setNotificationHandler(PushTemplateNotificationHandler() as NotificationHandler);
 
         binding.updateProfile.setOnClickListener {
         }
