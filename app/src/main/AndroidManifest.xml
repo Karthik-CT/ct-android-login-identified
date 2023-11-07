@@ -36,14 +36,13 @@
         <!-- TEST-KarthikTest Account -->
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
-            android:value="account_id" />
+            android:value="TEST-W8W-6WR-846Z" />
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="account_token" />
-
-        <!--         <meta-data -->
-        <!--         android:name="CLEVERTAP_USE_GOOGLE_AD_ID" -->
-        <!--         android:value="1" /> -->
+            android:value="TEST-206-0b0" />
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
 
         <!--        <meta-data-->
         <!--            android:name="FCM_SENDER_ID"-->
@@ -76,6 +75,18 @@
             android:exported="false">
 
         </receiver>
+
+
+        <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_mdVJQyWqhNnQZXBCQ1pT7hdcqrkYtoYm" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_fkGJHC1zaKmL40rqL0FpUlggAqcYul3F" />
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="true" />
 
     </application>
 

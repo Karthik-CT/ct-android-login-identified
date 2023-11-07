@@ -74,4 +74,6 @@ dependencies {
 
     //push templates
     implementation "com.clevertap.android:push-templates:1.0.5.1"
+
+    implementation 'io.branch.sdk.android:library:5.2.0'
 }

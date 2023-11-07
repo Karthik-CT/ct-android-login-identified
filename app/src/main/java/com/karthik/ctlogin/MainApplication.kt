@@ -12,6 +12,7 @@ import android.os.Build
 import com.clevertap.android.sdk.interfaces.NotificationHandler
 import com.clevertap.android.pushtemplates.PushTemplateNotificationHandler
 import com.clevertap.android.sdk.pushnotification.CTPushNotificationListener
+import io.branch.referral.Branch
 
 // class MainApplication : Application(), CTPushNotificationListener{
 class MainApplication : Application(), CTPushNotificationListener{
@@ -36,6 +37,9 @@ class MainApplication : Application(), CTPushNotificationListener{
 
         // val cleverTapAPI = CleverTapAPI.getDefaultInstance(applicationContext)
         // cleverTapAPI!!.ctPushNotificationListener = this
+
+        Branch.enableLogging()
+        Branch.getAutoInstance(this)
     }
 
     override fun onNotificationClickedPayloadReceived(payload: HashMap<String, Any>?) {
